@@ -17,7 +17,7 @@ fn main() -> io::Result<()> {
         process::exit(1);
     }
 
-    if let Err((filename, e)) = lmfao::run_cat(&args) {
+    if let Err((filename, e)) = rat::run(&args) {
         match e.kind() {
             io::ErrorKind::NotFound => {
                 err_msg!("file {} not found", filename.yellow());
