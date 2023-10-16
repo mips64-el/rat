@@ -13,7 +13,7 @@ fn main() -> io::Result<()> {
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
-        eprintln!("Usage: {} <file1> <file2> ....", args[0]);
+        eprintln!("{} {} <file1> ...", "Usage:".green().bold(), args[0].bold());
         process::exit(1);
     }
 
